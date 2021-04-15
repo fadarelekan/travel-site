@@ -6,7 +6,13 @@
         float:left;
         width: 33.3%;
     }
+    
     &__medium-4--larger{
+        width:50%;
+    }
+
+    &__medium-6{
+        float:left;
         width:50%;
     }
     
