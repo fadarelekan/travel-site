@@ -2,9 +2,16 @@
 
 @mixin atMedium{
 
+    &-t-padding{
+        padding-top:80px;
+    }
     &__medium-4{
         float:left;
         width: 33.3%;
+    }
+
+    &--gutter-small{
+        margin-right:-45px;
     }
     
     &__medium-4--larger{
@@ -24,6 +31,15 @@
         width:50%;
     }
     
+}
+&--equal-height{
+    @mixin atMedium{
+        display:flex;
+    }
+    & > div{
+        float:none;
+        display:flex;
+    }
 }
 
     

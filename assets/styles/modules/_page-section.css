@@ -1,6 +1,10 @@
 .page-section{
     padding: 1.2rem 0;
     
+    @mixin atLarge{
+        padding:45rem;
+    }
+
     @mixin atMedium {
         padding:45rem 0;
     }
@@ -9,5 +13,10 @@
     &--blue{
         background-color: $mainBlue;
         color:#fff;
+    }
+
+    &--testimonials{
+        background-color:lightblue;
+        background-size: cover;
     }
 }
