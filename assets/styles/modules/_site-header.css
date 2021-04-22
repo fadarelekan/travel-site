@@ -10,7 +10,11 @@
     }
 
     &__btn-container{
-        float:right;
+        @mixin atMedium{
+            order:2;
+        /*  float:right */
+        }
+        
     }
 
     &__logo{
@@ -32,21 +36,63 @@
     &__menu-icon{
         width:20px;
         height: 20px;
-        background-color: #fff;
         position:absolute;
         top:10px;
         right:10px;
+
+        &__top{
+          position: absolute;
+          top:0;
+          left:0;
+          width:20px;
+          height:3px;
+          background-color:#fff; 
+          transform-origin: 0 0; 
+        }
+
+        &__middle{
+            position: absolute;
+            top:8px;
+            left:0;
+            width:20px;
+            height:3px;
+            background-color:#fff;  
+        }
+
+        &__bottom{
+            position: absolute;
+            top:16px;
+            left:0;
+            width:20px;
+            height:3px;
+            background-color:#fff;  
+          }
 
         @mixin atMedium{
             display:none;
         }
     }
 
+    &__menu-icon--close-x{
+        &::before{
+            transform: rotate(45deg) scaleX(1.25);
+        }
+    }
+
     &__menu-content{
         display:none;
+        padding-top:80px;
+        text-align: center;
 
         @mixin atMedium{
+            display:flex;
+            justify-content:flex-end;
+            padding-top:0;
+        }
+
+        &--is-visible{
             display:block;
         }
+        
     }
 }

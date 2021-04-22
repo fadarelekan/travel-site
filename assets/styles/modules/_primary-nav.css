@@ -1,9 +1,5 @@
 .primary-nav{
-
-
-    &--pull-right{
-        float:right;
-    }
+padding-top:10px;
     ul{
         margin:0;
         padding:0;
@@ -12,8 +8,19 @@
 
     li{
         list-style:none;
-        float:left;
-        padding-right:20px;
+        display: inline-block;
+        padding-right:7px;
+        @mixin atMedium{
+         padding-right:20px;
+          
+        }
+    }
+
+    li:last-child{
+       padding-right: 0;
+       @mixin atMedium{
+        padding-right:20px;    
+       } 
     }
     a{
         color: #fff;

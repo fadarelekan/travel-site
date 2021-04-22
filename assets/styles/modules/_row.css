@@ -1,6 +1,6 @@
 .row{
 
-@mixin atMedium{
+
 
     &-t-padding{
         padding-top:80px;
@@ -11,7 +11,7 @@
     }
 
     &--gutter-small{
-        margin-right:-45px;
+        column-gap:45px;
     }
     
     &__medium-4--larger{
@@ -31,7 +31,7 @@
         width:50%;
     }
     
-}
+
 &--equal-height{
     @mixin atMedium{
         display:flex;
