@@ -12,7 +12,7 @@ events(){
     window.addEventListener("scroll", this.scrollThrottle)       
 }
 
-calCaller(){
+calcCaller(){
     console.log("Scroll function ran")
        this.itemsToReveal.forEach(el=>{
            this.calculateIfScrolledTo(el)
