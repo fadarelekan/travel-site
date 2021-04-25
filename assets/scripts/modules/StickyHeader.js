@@ -4,6 +4,7 @@ class StickyHeader {
 constructor() {
     this.siteHeader=document.querySelector(".site-Header")
     this.pageSections=document.querySelectorAll(".page-section")
+     this.browserHeight=window.innerHeight
     this.events()
 }
 
@@ -23,7 +24,7 @@ events() {
     
     calcSection(el){
         if(window.scrollY + window.innerHeight > el.offsetTop && window.scrollY < el.offsetTop + el.offsetHeight){
-
+            let scrollPercent= el.getBoundingClientRect().y /window.innerHeight * 100
         }
     }
 }
