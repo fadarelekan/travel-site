@@ -5,26 +5,12 @@ import StickyHeader from './modules/StickyHeader'
 alert ("Hello there , click okay if u can see this !!!")
 
 
-new StickyHeader()
+let stickyHeader = new StickyHeader()
 let revealOnScroll= new RevealOnScroll()
 
-new MobileMenu();
-let overlay
-
-document.querySelectorAll(".open-overlay").forEach(el =>{
-    el.addEventListener("click",e=>{
-        e.preventDefault()
-        if(typeof overlay=="undefined" ){
-            import(/* webpackChunkName:"modal" */ './modules/Overlay').then(x =>{
-                overlay=new x.default()
-                setTimeout(()=>overlay.openTheOverlay(),20)
-            }).catch(()=>console.log("There was a problem")) 
-        }else{
-            overlay.openTheOverlay()
-        }
-    })
-})
+let mobileMenu=new MobileMenu();
 
 if (module.hot){
     module.hot.accept()
 }
+
