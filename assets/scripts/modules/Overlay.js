@@ -3,10 +3,13 @@ class Overlay{
         this.injectHTML()
         this.overlay=document.querySelector(".overlay")
         this.closeIcon= document.querySelector(".overlay__close")
+        this.openOverlayButtons=document.querySelectorAll(".open-overlay")
         this.events()
     }
 
     events(){
+        // listen for open click
+        this.openOverlayButtons.forEach(el=> el.addEventListener("click",e=>this.openTheOverlay(e)))
         // listen for close click
         this.closeIcon.addEventListener("click",() => this.closeTheOverlay())
         // pushes any key
@@ -20,7 +23,8 @@ class Overlay{
         }
     }
 
-    openTheOverlay(){
+    openTheOverlay(e){
+     e.preventDefault()
      this.overlay.classList.add("overlay--is-visible")
     }
 
