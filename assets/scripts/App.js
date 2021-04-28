@@ -2,8 +2,11 @@ import '../styles/styles.css'
 import MobileMenu from './modules/MobileMenu'
 import RevealOnScroll from './modules/RevealOnScroll'
 import StickyHeader from './modules/StickyHeader'
+import ClientArea from './modules/ClientArea'
 alert ("Hello there, click okay if you can see this !!!!")
 
+
+new ClientArea()
 
 let stickyHeader = new StickyHeader()
 let revealOnScroll= new RevealOnScroll()
